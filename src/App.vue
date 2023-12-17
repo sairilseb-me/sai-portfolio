@@ -5,9 +5,9 @@
     <v-app-bar title="Sai Portfolio" elevation="2">
       <v-spacer></v-spacer>
       <v-btn text @click="routeTo('/')">Home</v-btn>
-      <v-btn text>About</v-btn>
-      <v-btn text>Projects</v-btn>
-      <v-btn text>Contact</v-btn>
+      <v-btn text @click="routeTo('/about')">About</v-btn>
+      <v-btn text @click="routeTo('/projects')">Projects</v-btn>
+      <v-btn text @click="routeTo('/contact')">Contact</v-btn>
     </v-app-bar>
    <v-main class="mt-3">
     <router-view></router-view>
