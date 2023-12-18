@@ -1,5 +1,3 @@
-
-
 <template>
   <v-app>
     <v-app-bar title="Sai Portfolio" elevation="2">

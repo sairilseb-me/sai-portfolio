@@ -1,3 +1,251 @@
 <template>
-   <h1>This is the homepage</h1>
+    <v-container fluid >
+       
+        <v-row>
+            <v-col md="6" class="h-25 pa-15 mt-15">
+                <v-card flat>
+                    <v-card-text>
+                        <p class="mb-2">Hello!</p>
+                        <p class="text-h2">I'm Sairil Seberiaga</p>
+                        <p class="text-h5 my-2">IT and Junior Software Developer</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus veritatis odit quibusdam repellendus unde provident harum accusantium officiis distinctio blanditiis architecto dolorem beatae tenetur, doloribus enim incidunt, nisi quaerat?</p>
+                    </v-card-text>
+                    <v-card-actions class="pl-0">
+                        <v-btn class="bg-purple text-white">Hire Me</v-btn>
+                    </v-card-actions>
+                </v-card>
+            </v-col>
+            <v-col md="6">
+            </v-col>
+        </v-row>
+        <v-divider></v-divider>
+        <v-row>
+            <v-col md="6">
+                <v-card flat>
+                    <v-card-text>
+                        <div class="techStackFont my-5">Tech Stack</div>
+                        <div class="d-flex justify-space-between align-center pt-3">
+                            <span class="text-h1" v-for="(prog, i) in progList" :key="i">
+                                <i v-if="prog.icon" :class="prog.icon" class="ml-3"></i>
+                                <p v-else class="text-h4">{{ prog.title }}</p>
+                            </span>
+                        </div>
+                    </v-card-text>
+                </v-card>
+                <v-divider></v-divider>
+                <v-card flat>
+                    <v-card-text>
+                        <div class="techStackFont my-5">Frameworks</div>
+                        <div class="d-flex justify-start align-center pt-3 flex-wrap">
+                            <span class="text-h1" v-for="(frame, i) in frameworkList" :key="i">
+                                <i v-if="frame.icon" :class="frame.icon" class="ml-3"></i>
+                                <p v-else class="text-h4">{{ frame.title }}</p>
+                            </span>
+                        </div>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+            <v-col md="6" class="my-5">
+                <v-card flat>
+                    <v-card-title>About Me</v-card-title>
+                    <v-card-text>
+                        <p class="personalInfo">A career shifter from SEO to Programming. Has extensive experience in creating desktop applications 
+using VB.NET and now transitioning to Web Application Development. A goal driven individual and with
+the drive to learn new information to add to his skillsets.</p>
+                        <div class="d-flex align-center my-5 personalInfo">
+                            <v-icon>
+                                <svg-icon type="mdi" :path="icon.account"></svg-icon>
+                            </v-icon> 
+                            <p class="ml-3"> Cyril Seberiaga</p>
+                        </div>
+                        <div class="d-flex align-center my-5 personalInfo">
+                            <v-icon>
+                                <svg-icon type="mdi" :path="icon.email"></svg-icon>
+                            </v-icon> 
+                            <p class="ml-3"> cyrilseberiaga@gmail.com</p>
+                        </div>
+                        <div class="d-flex align-center my-5 personalInfo">
+                            <v-icon>
+                                <i class="devicon-linkedin-plain"></i>
+                            </v-icon> 
+                            <p class="ml-3"> https://www.linkedin.com/in/sairilseberiaga/</p>
+                        </div>
+                        <div class="d-flex align-center my-5 personalInfo">
+                            <v-icon>
+                                <i class="devicon-github-original"></i>
+                            </v-icon> 
+                            <p class="ml-3"> https://github.com/sairilseb-me</p>
+                        </div>
+                        <div class="d-flex align-center my-5 personalInfo">
+                            <v-btn class="bg-purple text-white">Download CV</v-btn>
+                        </div>
+                    </v-card-text>
+                </v-card>
+            </v-col>
+        </v-row>
+        <v-divider></v-divider>
+        <v-row class="mt-5">
+           <v-col md="12" class="d-flex justify-center">
+                <v-card flat>
+                    <v-card-text>
+                        <p class="text-h5">Projects</p>
+                    </v-card-text>
+                </v-card>
+           </v-col>
+        </v-row>
+        <v-row>
+            <v-col md="4" v-for="(project, index) in projects" :key="index">
+                <project-panel :project="project"></project-panel>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
+
+<script>
+import { ref } from 'vue'
+
+import ProjectPanel from './layouts/project-panels.vue'
+
+import SvgIcon from '@jamescoyle/vue-icon';
+import { mdilAccount, mdilEmail } from '@mdi/light-js';
+
+export default {
+    components: {
+        SvgIcon,
+        ProjectPanel,
+    },
+    setup() {
+        
+        const progList = ref([
+            {
+                title: 'PHP',
+                icon: 'devicon-php-plain'
+            },
+            {
+                title: 'javascript',
+                icon: 'devicon-javascript-plain'
+            },
+            {
+                title: 'VB.NET',
+                icon: ''
+            },
+            {
+                title: 'Python',
+                icon: 'devicon-python-plain-wordmark'
+            },
+            {
+
+            }
+        ])
+
+        const frameworkList = ref([
+            {
+                title: 'Laravel',
+                icon: 'devicon-laravel-plain-wordmark'
+            },
+            {
+                title: 'Vue JS',
+                icon: 'devicon-vuejs-plain-wordmark'
+            },
+            {
+                title: 'Bootstrap',
+                icon: 'devicon-bootstrap-plain-wordmark'
+            },
+            {
+                title: 'jQuery',
+                icon: 'devicon-jquery-plain-wordmark'
+            },
+            {
+                title: 'Vuetify',
+                icon: 'devicon-vuetify-line'
+            },
+            {
+                title: 'Dot Net Framework',
+                icon: 'devicon-dot-net-plain-wordmark'
+            },
+            {
+                title: 'Tailwind',
+                icon: 'devicon-tailwindcss-original-wordmark'
+            }
+        ])
+
+        const projects = ref([
+            {
+                title: 'AICS Financial System',
+                description: 'A windows application that handles the record of people that the government has given a financial aide in times of crisis. It is connected to the Governors Office, Provincial Social Welfare and Development Office and Provicial Treasurer Office.',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['VB.NET', 'Windows .NET Framework 4.5', 'MSSQL']
+            },
+            {
+                title: 'COVID-19 Inventory Tracker',
+                description: 'A windows application that keeps track of the donation and distribution of equipments and goods during the COVID-19 pandemic.',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['VB.NET', 'Windows .NET Framework 4.5', 'MSSQL']
+            },
+            {
+                title: 'GFAS (Guimaras Faceshield and Social Distancing System)',
+                description: 'A windows application that keeps track of people caught violating the Faceshield and Social Distancing Ordinance of the Province of Guimaras.',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['VB.NET', 'Windows .NET Framework 4.5', 'MSSQL']
+            },
+            {
+                title: 'Hospital Inventory and Sales System',
+                description: 'A windows application that keeps track of the inventory and sales of the Hospital Pharmacy for the Dr. Catalino Gallego Nava Hospital.',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['VB.NET', 'Windows .NET Framework 4.7', 'MySQL']
+            },
+            {
+                title: 'Panilab Crawling System',
+                description: 'A web based application that crawls data from different websites and stores it in a database to be processed.',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['PHP', 'Laravel', 'jQuery', 'MySQL', 'Bootstrap']
+            },
+            {
+                title: 'Document Tracking System',
+                description: 'A web based application that tracks and stores the documents being uploaded. It is also used to receive documents per office.',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['Laravel', 'jQuery', 'MySQL', 'Bootstrap']
+            },
+            {
+                title: 'MoNF Project Management System',
+                description: 'A web based application that manages the Projects that is being handled by the Company',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['Laravel', 'VueJS', 'Vuetify', 'MySQL', 'Materio UI']
+            }
+        ])
+
+
+        return {
+            progList,
+            frameworkList,
+            projects,
+
+            icon: {
+                account: mdilAccount,
+                email: mdilEmail
+            }
+        }
+    },
+}
+</script>
+
+
+
+<style scoped>
+    .techStackFont {
+        font-size: larger;
+    }
+
+    .personalInfo {
+        font-size: larger;
+    }
+
+
+</style>
