@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunksai_portfolio"]=self["webpackChunksai_portfolio"]||[]).push([[451],{451:function(n,t,u){u.r(t),u.d(t,{default:function(){return f}});var e=u(3396);function o(n,t){const u=(0,e.up)("v-col"),o=(0,e.up)("v-row"),r=(0,e.up)("v-container");return(0,e.wg)(),(0,e.j4)(r,null,{default:(0,e.w5)((()=>[(0,e.Wm)(o,null,{default:(0,e.w5)((()=>[(0,e.Wm)(u,{md:"12"},{default:(0,e.w5)((()=>[(0,e.Uk)("Not yet finished")])),_:1})])),_:1})])),_:1})}var r=u(89);const l={},a=(0,r.Z)(l,[["render",o]]);var f=a}}]);
+//# sourceMappingURL=451.12fc5c53.js.map
