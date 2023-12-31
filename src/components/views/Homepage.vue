@@ -8,7 +8,10 @@
                         <p class="mb-2">Hello!</p>
                         <p class="text-h2">I'm Sairil Seberiaga</p>
                         <p class="text-h5 my-2">IT and Junior Software Developer</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptatibus veritatis odit quibusdam repellendus unde provident harum accusantium officiis distinctio blanditiis architecto dolorem beatae tenetur, doloribus enim incidunt, nisi quaerat?</p>
+                        <p class="personalInfo text-subtitle-2">A career shifter from SEO to Programming. Has extensive experience in creating desktop applications 
+using VB.NET and now transitioning to Web Application Development. A goal driven individual and with
+the drive to learn new information to add to his skillsets.</p>
+                        
                     </v-card-text>
                     <v-card-actions class="pl-0">
                         <v-btn class="bg-purple text-white">Hire Me</v-btn>
@@ -16,6 +19,12 @@
                 </v-card>
             </v-col>
             <v-col md="6">
+                <v-img
+                    height="500"
+                    :src="require('@/assets/images/sairil-headshot.jpeg')"
+                >
+
+                </v-img>
             </v-col>
         </v-row>
         <v-divider></v-divider>
@@ -44,14 +53,63 @@
                         </div>
                     </v-card-text>
                 </v-card>
+                <v-divider></v-divider>
+               
+                <v-card flat>
+                    <v-row>
+                        <v-col md="6">
+                            <v-card-text>
+                                <div class="techStackFont my-5">Operating Systems</div>
+                                <div class="d-flex justify-start align-center pt-3 flex-wrap">
+                                    <span class="text-h1" v-for="(os, i) in OSList" :key="i">
+                                        <i v-if="os.icon" :class="os.icon" class="ml-3"></i>
+                                        <p v-else class="text-h4">{{ os.title }}</p>
+                                    </span>
+                                </div>
+                            </v-card-text>
+                        </v-col>
+                        <v-col md="6">
+                            <v-card-text>
+                            <div class="techStackFont my-5">Repositories</div>
+                            <div class="d-flex justify-start align-center pt-3 flex-wrap">
+                                <span class="text-h1" v-for="(repo, i) in repositories" :key="i">
+                                    <i v-if="repo.icon" :class="repo.icon" class="ml-3"></i>
+                                    <p v-else class="text-h4">{{ repo.title }}</p>
+                                </span>
+                            </div>
+                        </v-card-text>
+                        </v-col>
+
+                    </v-row>
+                </v-card>
+                <v-divider></v-divider>
+                <v-card flat>
+                   <v-card-text>
+                    <div class="techStackFont my-5">Project Development</div>
+                            <div class="d-flex justify-start align-center pt-3 flex-wrap">
+                                <span class="text-h1" v-for="(dev, i) in projectDevelopment" :key="i">
+                                    <i v-if="dev.icon" :class="dev.icon" class="ml-3"></i>
+                                    <p v-else class="text-h4">{{ dev.title }}</p>
+                                </span>
+                            </div>
+                   </v-card-text>
+                </v-card>
             </v-col>
             <v-col md="6" class="my-5">
                 <v-card flat>
-                    <v-card-title>About Me</v-card-title>
+                    <v-card-title>Other Skills</v-card-title>
                     <v-card-text>
-                        <p class="personalInfo">A career shifter from SEO to Programming. Has extensive experience in creating desktop applications 
-using VB.NET and now transitioning to Web Application Development. A goal driven individual and with
-the drive to learn new information to add to his skillsets.</p>
+                        <ul>
+                            <li>Supports and maintains ICT hardware and software equipment</li>
+                            <li>Maintains appropriate security and troubleshoots any issues</li>
+                            <li>PC/Laptop Troubleshooting</li>
+                            <li>Checking of the Computer equipments if it passed the specifications/requirements of End user</li>
+                            <li>Network Administration</li>
+                            <li>Database Manager</li>
+                            <li>Audio and Video for Zoom and Facebook Live</li>
+                            <li>Customer Support</li>
+                        </ul>
+                        
                         <div class="d-flex align-center my-5 personalInfo">
                             <v-icon>
                                 <svg-icon type="mdi" :path="icon.account"></svg-icon>
@@ -169,6 +227,49 @@ export default {
             }
         ])
 
+        const OSList = ref([
+            {
+                title: 'Windows',
+                icon: 'devicon-windows8-original'
+            },
+            {
+                title: 'Linux',
+                icon: 'devicon-linux-plain'
+            },
+            {
+                title: 'Mac OS',
+                icon: 'devicon-apple-original'
+            }
+        ])
+
+        const repositories = ref([
+            {
+                title: 'Bitbcuket',
+                icon: 'devicon-bitbucket-original'
+            },
+            {
+                title: 'Github',
+                icon: 'devicon-github-original'
+            }
+        ])
+
+        const projectDevelopment = ref([
+            {
+                title: 'JIRA',
+                icon: 'devicon-jira-plain-wordmark'
+            },
+            {
+                title: 'VSCode',
+                icon: 'devicon-vscode-plain-wordmark'
+            },
+            {
+                title: 'Visual Studio',
+                icon: 'devicon-visualstudio-plain-wordmark'
+            }
+        ])
+
+
+
         const projects = ref([
             {
                 title: 'AICS Financial System',
@@ -226,6 +327,9 @@ export default {
             progList,
             frameworkList,
             projects,
+            OSList,
+            repositories,
+            projectDevelopment,
 
             icon: {
                 account: mdilAccount,
@@ -245,6 +349,10 @@ export default {
 
     .personalInfo {
         font-size: larger;
+    }
+
+    .italic-font {
+        font: italic;
     }
 
 
