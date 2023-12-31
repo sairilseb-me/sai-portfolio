@@ -1,26 +1,44 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-app-bar title="Sai Portfolio" elevation="2">
+      <v-spacer></v-spacer>
+      <v-btn text @click="routeTo('/')">Home</v-btn>
+      <v-btn text @click="routeTo('/about')">About</v-btn>
+      <v-btn text @click="routeTo('/projects')">Projects</v-btn>
+      <v-btn text @click="routeTo('/contact')">Contact</v-btn>
+    </v-app-bar>
+   <v-main class="mt-3">
+    <router-view></router-view>
+   </v-main>
+  </v-app>
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Homepage from './components/views/Homepage.vue'
+import {useRouter} from 'vue-router'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Homepage
+  },
+  setup() {
+     
+    const router = useRouter()
+    const routeTo = (path) => {
+      router.push(path)
+    }
+
+    return {
+      routeTo
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  
 }
 </style>
