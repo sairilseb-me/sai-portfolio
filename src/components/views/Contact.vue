@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row class="d-flex align-center" style="height: 100vh;">
-            <v-col md="6">
+            <v-col :cols="mdAndUp ? '6' : '12'">
                 <v-card class="pa-8">
                     <v-card-title>Contact Me</v-card-title>
                     <v-card-text>
@@ -23,7 +23,7 @@
                     </v-card-text>
                 </v-card>
             </v-col>
-            <v-col md="6">
+            <v-col :cols="mdAndUp ? '6' : '12'">
                 <v-card class="pa-8">
                     <v-card-title>You can contact me through the following:</v-card-title>
                     <v-card-text>
@@ -49,16 +49,18 @@
 
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdilAccount, mdilEmail } from '@mdi/light-js';
+import { useDisplay } from 'vuetify';
 export default {
     components: {
         SvgIcon
     },
     setup() {
-        
+        const {mdAndUp} = useDisplay()
 
         return {
 
             // icons
+            mdAndUp,
             icons: {
                 email: mdilEmail
             }

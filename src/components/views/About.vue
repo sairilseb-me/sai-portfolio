@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-row>
-            <v-col md="6">
+            <v-col :cols="mdAndUp ? '6' : '12'">
                 <div class="my-12">
                     <v-img
                         height="820"
@@ -11,15 +11,14 @@
                     ></v-img>
                 </div>
             </v-col>
-            <v-col md="6">
+            <v-col :cols="mdAndUp ? '6' : '12'">
                 <v-card flat class="mt-10">
                     <v-card-text>
                         <p class="text-h3 mb-5">About</p>
                         <v-divider></v-divider>
-                        <p class="my-3 font-weight-regular">I have found your job posting and I am interested in applying for Information Technology Officer 
-                        I. My name is Cyril Seberiaga, a graduate of Bachelor of Science in Computer Engineering at the 
+                        <p class="my-3 font-weight-regular">A graduate of Bachelor of Science in Computer Engineering at the 
                         University of San Agustin. I was a Freelance SEO (Search Engine Optimization) in the past but shifted 
-                        career to Programming. I am a highly analytical person and likes to solve problems and challenges.</p>
+                        career to Programming.</p>
 
                         <p class="my-3 font-weight-regular">I am currently working as a Computer Programmer in the Province of Guimaras. I create systems that can 
                         help with our Local Government Unit. I created a Financial Assistance Systems (AICS) which is connecting 
@@ -53,3 +52,17 @@
         </v-row>
     </v-container>
 </template>
+
+<script>
+import { useDisplay } from 'vuetify';
+export default {
+    
+    setup() {
+        const {mdAndUp} = useDisplay()
+
+        return {
+            mdAndUp
+        }
+    },
+}
+</script>
