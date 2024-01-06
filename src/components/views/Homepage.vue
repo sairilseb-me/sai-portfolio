@@ -2,11 +2,11 @@
     <v-container fluid >
        
         <v-row>
-            <v-col md="6" class="h-25 pa-15 mt-15">
+            <v-col :cols="mdAndUp ? '6' : '12'" class="h-25 pa-15 mt-15">
                 <v-card flat>
                     <v-card-text>
                         <p class="mb-2">Hello!</p>
-                        <p class="text-h2">I'm Sairil Seberiaga</p>
+                        <p :class=" mdAndUp ? 'text-h2' : 'text-h4' ">I'm Sairil Seberiaga</p>
                         <p class="text-h5 my-2">IT and Junior Software Developer</p>
                         <p class="personalInfo text-subtitle-2">A career shifter from SEO to Programming. Has extensive experience in creating desktop applications 
 using VB.NET and now transitioning to Web Application Development. A goal driven individual and with
@@ -166,6 +166,7 @@ import ProjectPanel from './layouts/project-panels.vue'
 
 import SvgIcon from '@jamescoyle/vue-icon';
 import { mdilAccount, mdilEmail } from '@mdi/light-js';
+import { useDisplay } from 'vuetify'
 
 export default {
     components: {
@@ -173,7 +174,7 @@ export default {
         ProjectPanel,
     },
     setup() {
-        
+        const {mdAndUp} = useDisplay()
         const progList = ref([
             {
                 title: 'PHP',
@@ -330,6 +331,7 @@ export default {
             OSList,
             repositories,
             projectDevelopment,
+            mdAndUp,
 
             icon: {
                 account: mdilAccount,
