@@ -13,9 +13,6 @@ using VB.NET and now transitioning to Web Application Development. A goal driven
 the drive to learn new information to add to his skillsets.</p>
                         
                     </v-card-text>
-                    <v-card-actions class="pl-0">
-                        <v-btn class="bg-purple text-white">Hire Me</v-btn>
-                    </v-card-actions>
                 </v-card>
             </v-col>
             <v-col md="6">
