@@ -13,9 +13,6 @@ using VB.NET and now transitioning to Web Application Development. A goal driven
 the drive to learn new information to add to his skillsets.</p>
                         
                     </v-card-text>
-                    <v-card-actions class="pl-0">
-                        <v-btn class="bg-purple text-white">Hire Me</v-btn>
-                    </v-card-actions>
                 </v-card>
             </v-col>
             <v-col md="6">
@@ -135,7 +132,7 @@ the drive to learn new information to add to his skillsets.</p>
                             <p class="ml-3"> https://github.com/sairilseb-me</p>
                         </div>
                         <div class="d-flex align-center my-5 personalInfo">
-                            <v-btn class="bg-purple text-white">Download CV</v-btn>
+                            <v-btn class="bg-purple text-white"><a href="/documents/Cyril_Seberiaga_CV_Plain.pdf" class="text-decoration-none text-white">Check out CV</a></v-btn>
                         </div>
                     </v-card-text>
                 </v-card>

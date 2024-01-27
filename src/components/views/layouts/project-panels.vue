@@ -10,13 +10,14 @@
                     <v-chip  v-for="(tech, index) in project.techstack" :key="index">{{ tech }}</v-chip>
                 </v-chip-group> 
                 <v-divider></v-divider>
-                <v-btn class="bg-purple text-white mt-3">Project Details</v-btn>
+                <v-btn class="bg-purple text-white mt-3" @click="routeToProject">Project Details</v-btn>
             </v-expansion-panel-text>
         </v-expansion-panel>
     </v-expansion-panels>
 </template>
 
 <script>
+import { useRouter } from 'vue-router';
 export default {
     props: {
         project: {
@@ -25,7 +26,14 @@ export default {
         }
     },
     setup() {
-        
+        const router = useRouter()
+        const routeToProject = () => {
+            router.push({path: '/projects'})
+        }
+
+        return {
+            routeToProject
+        }
     },
 }
 </script>
