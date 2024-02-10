@@ -1,6 +1,26 @@
 <template>
     <v-container>
         <v-row>
+            <v-navigation-drawer>
+                <v-row class="my-5">
+                    <v-col class="d-flex justify-center">
+                        <h3>My Projects</h3>
+                    </v-col>
+                </v-row>
+                <v-divider></v-divider>
+                <v-row>
+                    <v-col>
+                        <v-list
+                        v-for="(project, index) in projects" :key="index"
+                    >
+                        <v-list-item :title="project.title"></v-list-item>
+                    </v-list>
+                    </v-col>
+                </v-row>
+                
+            </v-navigation-drawer>
+        </v-row>
+        <v-row>
             <v-col md="12">
                 <h2>Projects</h2>
             </v-col>
