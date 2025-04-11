@@ -7,11 +7,14 @@
                     <v-card-text>
                         <p class="mb-2">Hello!</p>
                         <p :class=" mdAndUp ? 'text-h2' : 'text-h4' ">I'm Sairil Seberiaga</p>
-                        <p class="text-h5 my-2">IT and Junior Software Developer</p>
-                        <p class="personalInfo text-subtitle-2">A career shifter from SEO to Programming. Has extensive experience in creating desktop applications 
-using VB.NET and now transitioning to Web Application Development. A goal driven individual and with
-the drive to learn new information to add to his skillsets.</p>
-                        
+                        <p class="text-h5 my-2">Software Developer / SQE / SCRUM / Team Lead</p>
+                        <p class="personalInfo text-subtitle-2">A versatile Software Developer with over 5 years of experience 
+                            in building full-stack applications using Laravel, Vue 3, React, and Python (Flask, FastAPI). 
+                            With a strong foundation in backend API development and frontend component-based architecture, he has contributed 
+                            to real-world systems such as financial platforms, document management tools, and AI-integrated applications. 
+                            Cyril is proficient in data scraping, automation testing (Selenium, Gherkin), and data analysis using pandas. 
+                            He thrives in collaborative environments, values clean and maintainable code, and is always eager to learn 
+                            new tools and technologies to optimize development workflows.</p>
                     </v-card-text>
                 </v-card>
             </v-col>
