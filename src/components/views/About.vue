@@ -13,40 +13,43 @@
             </v-col>
             <v-col :cols="mdAndUp ? '6' : '12'">
                 <v-card flat class="mt-10">
-                    <v-card-text>
-                        <p class="text-h3 mb-5">About</p>
-                        <v-divider></v-divider>
-                        <p class="my-3 font-weight-regular">A graduate of Bachelor of Science in Computer Engineering at the 
-                        University of San Agustin. I was a Freelance SEO (Search Engine Optimization) in the past but shifted 
-                        career to Programming.</p>
+                <v-card-text>
+                    <p class="text-h3 mb-5">About</p>
+                    <v-divider></v-divider>
 
-                        <p class="my-3 font-weight-regular">I am currently working as a Computer Programmer in the Province of Guimaras. I create systems that can 
-                        help with our Local Government Unit. I created a Financial Assistance Systems (AICS) which is connecting 
-                        to 3 departments (Governors Office, PSWDO and Provincial Treasurers Office). The system helps with 
-                        managing and checking the Financial Aide grant by the offices. It is still being used 2 years after I have 
-                        created it. I have also created a Covid-19 Donation Inventory system and Guimaras Faceshield and Social 
-                        Distancing System. I am currently working on a Hospital Inventory and Sales System and Document 
-                        Routing and Archiving System.</p>
+                    <p class="my-3 font-weight-regular">
+                    I am a results-driven Software Developer and QA Engineer with over 5 years of experience building and testing scalable, real-world systems for government agencies and startups. I specialize in full-stack development, test automation, and agile project management.
+                    </p>
 
-                        <p class="my-3 font-weight-regular">I am also in-charge of creating custom pages to the official website (Wordpress) of the Province of 
-                        Guimaras. I connect different and scattered offices through the use of Point to Point and Nano station 
-                        and network it to the server so that every PC that has system that needs to be connected to the server 
-                        can communicate with it. I am also in-charge of making sure that the Audio and Video that is needed for 
-                        the Live Events (Social Media) and Zoom conference has a clear audio and video. I also create PC and 
-                        Laptop specifications to use in the Purchase Request of the Departments so that they can work 
-                        productively and not be hassled by the slow response of their PC/Laptop. I also troubleshoot software 
-                        and hardware issues my fellow employees.</p>
+                    <p class="my-3 font-weight-regular">
+                    I currently serve as Computer Programmer III at DSWD Field Office 6, where I lead QA efforts, develop cross-matching and automation systems using Python, React, and Flask, and help standardize testing practices. I also serve as SCRUM Master, improving team collaboration and sprint delivery.
+                    </p>
 
-                        <p class="my-3 font-weight-regular">On my free time, I learn Linux commands and how to navigate and install libraries and plugins on a Linux 
-                        Server. I am also learning Python in order to automate task such as filtering, processing and create 
-                        reports using CSV files. I am also learning how to use Docker as tool to create a Virtual Machine on my 
-                        local laptop/PC in order to avoid library incompatibility for the Systems that I will be creating.
-                        I am currently creating web applications using Laravel, Vue and MySQL to implement on the future plans 
-                        of the Province of Guimaras. Everything I have learned, I learned it through self-taught and through 
-                        research on Search Engines. I continue to learn new tech and skills after my work to improve my skills. I 
-                        am also a team player who is available to help with others if need be.
-                        </p>
-                    </v-card-text>
+                    <p class="my-3 font-weight-regular">
+                    Previously, I worked as Computer Programmer II for the Province of Guimaras. I built several mission-critical systems from scratch, including a Financial Assistance System (AICS) connecting three departments, a Document Storage System integrating NAS and local storage, and a Budget and Accounting System enabling multi-department reporting.
+                    </p>
+
+                    <p class="my-3 font-weight-regular">
+                    I also worked as a Freelance Developer for WSoft, a startup company in Korea, where I created a system to crawl websites and save gathered data using Laravel and Blade Template. Additionally, I contribute to Project Neo Dev, a community that helps developers gain real-world experience by building applications with React and Tailwind CSS.
+                    </p>
+
+                    <p class="my-3 font-weight-regular">
+                    I have experience managing networks using Point-to-Point and NanoStation devices, supporting live A/V events for social media and Zoom, and assisting departments with hardware specification and troubleshooting. I also maintain custom pages on the official website of the Province of Guimaras using WordPress.
+                    </p>
+
+                    <p class="my-3 font-weight-regular">
+                    In my free time, I enjoy learning new technologies including Linux, Docker, and automation scripting with Python. I have created scripts for email parsing using SimpleGmail, data visualization with Streamlit, and automated testing with tools like Selenium, Gherkin, Cypress, Playwright, and JMeter.
+                    </p>
+
+                    <p class="my-3 font-weight-regular">
+                    I am a self-taught problem solver with a passion for continuous learning. I am proud to have passed the Civil Service Exam (Professional), earned a Superior rating in the PTE English Exam, and received the “Most Improved Participant” award from DICT’s Python Training of Trainers program.
+                    </p>
+
+                    <p class="my-3 font-weight-regular">
+                    I take pride in being a team player, a lifelong learner, and someone who always aims to deliver quality and efficiency in every project I work on.
+                    </p>
+
+                </v-card-text>
                 </v-card>
             </v-col>
         </v-row>
