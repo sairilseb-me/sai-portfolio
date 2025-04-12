@@ -135,7 +135,7 @@
                             <p class="ml-3"> https://github.com/sairilseb-me</p>
                         </div>
                         <div class="d-flex align-center my-5 personalInfo">
-                            <v-btn class="bg-purple text-white"><a href="/documents/Cyril_Seberiaga_CV_Plain.pdf" class="text-decoration-none text-white">Check out CV</a></v-btn>
+                            <v-btn class="bg-purple text-white"><a href="https://drive.google.com/file/d/194kn4Auj_YjceLhFEZACS_Ki53v8H2S7/view?usp=sharing" class="text-decoration-none text-white" target="_blank">Check out CV</a></v-btn>
                         </div>
                     </v-card-text>
                 </v-card>
