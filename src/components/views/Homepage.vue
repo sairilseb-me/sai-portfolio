@@ -12,7 +12,7 @@
                             in building full-stack applications using Laravel, Vue 3, React, and Python (Flask, FastAPI). 
                             With a strong foundation in backend API development and frontend component-based architecture, he has contributed 
                             to real-world systems such as financial platforms, document management tools, and AI-integrated applications. 
-                            Cyril is proficient in data scraping, automation testing (Selenium, Gherkin), and data analysis using pandas. 
+                            Sairil is proficient in data scraping, automation testing (Selenium, Gherkin), and data analysis using pandas. 
                             He thrives in collaborative environments, values clean and maintainable code, and is always eager to learn 
                             new tools and technologies to optimize development workflows.</p>
                     </v-card-text>
@@ -91,6 +91,19 @@
                                     <i v-if="dev.icon" :class="dev.icon" class="ml-3"></i>
                                     <p v-else class="text-h4">{{ dev.title }}</p>
                                 </span>
+                            </div>
+                   </v-card-text>
+                </v-card>
+                <v-divider></v-divider>
+                <v-card flat>
+                   <v-card-text>
+                    <div class="techStackFont my-5">Software Quality</div>
+                            <div class="d-flex justify-start align-center pt-3 flex-wrap">
+                                <ul>
+                                    <li v-for="(qa, i) in qaSoftwares" :key="i">
+                                        {{ qa.title }}
+                                    </li>
+                                </ul>
                             </div>
                    </v-card-text>
                 </v-card>
@@ -192,9 +205,6 @@ export default {
                 title: 'Python',
                 icon: 'devicon-python-plain-wordmark'
             },
-            {
-
-            }
         ])
 
         const frameworkList = ref([
@@ -257,15 +267,38 @@ export default {
         const projectDevelopment = ref([
             {
                 title: 'JIRA',
-                icon: 'devicon-jira-plain-wordmark'
+                icon: 'devicon-jira-plain'
             },
             {
                 title: 'VSCode',
-                icon: 'devicon-vscode-plain-wordmark'
+                icon: 'devicon-vscode-plain'
             },
             {
                 title: 'Visual Studio',
                 icon: 'devicon-visualstudio-plain-wordmark'
+            }
+        ])
+
+        const qaSoftwares = ref([
+            {
+                title: 'Playwright',
+                icon: 'devicon-playwright-plain'
+            },
+            {
+                title: "K6",
+                icon: "devicon-k6-original"
+            },
+            {
+                title: "Gherkin",
+                icon: "devicon-selenium-original"
+            },
+            {
+                title: "Cypress",
+                icon: "devicon-cypressio-plain"
+            },
+            {
+                title: "Selenium",
+                icon: "devicon-selenium-original"
             }
         ])
 
@@ -331,6 +364,7 @@ export default {
             OSList,
             repositories,
             projectDevelopment,
+            qaSoftwares,
             mdAndUp,
 
             icon: {
