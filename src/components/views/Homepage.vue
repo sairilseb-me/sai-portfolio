@@ -94,22 +94,9 @@
                             </div>
                    </v-card-text>
                 </v-card>
-                <v-divider></v-divider>
-                <v-card flat>
-                   <v-card-text>
-                    <div class="techStackFont my-5">Software Quality</div>
-                            <div class="d-flex justify-start align-center pt-3 flex-wrap">
-                                <ul>
-                                    <li v-for="(qa, i) in qaSoftwares" :key="i">
-                                        {{ qa.title }}
-                                    </li>
-                                </ul>
-                            </div>
-                   </v-card-text>
-                </v-card>
             </v-col>
             <v-col md="6" class="my-5">
-                <v-card flat>
+                <v-card flat class="mb-8">
                     <v-card-title>Other Skills</v-card-title>
                     <v-card-text>
                         <ul>
@@ -151,6 +138,18 @@
                             <v-btn class="bg-purple text-white"><a href="https://drive.google.com/file/d/194kn4Auj_YjceLhFEZACS_Ki53v8H2S7/view?usp=sharing" class="text-decoration-none text-white" target="_blank">Check out CV</a></v-btn>
                         </div>
                     </v-card-text>
+                </v-card>
+                <v-divider></v-divider>
+                <v-card flat>
+                   <v-card-text>
+                    <div class="techStackFont my-5">Software Quality</div>
+                            <div class="d-flex justify-start align-center pt-3 flex-wrap ga-3">
+                                <span class="text-h1" v-for="(qa, i) in qaSoftwares" :key="i">
+                                    <i v-if="qa.icon" :class="qa.icon" class="ml-3"></i>
+                                    <p v-else class="text-h4">{{ qa.title }}</p>
+                                </span>
+                            </div>
+                   </v-card-text>
                 </v-card>
             </v-col>
         </v-row>
@@ -235,6 +234,10 @@ export default {
             {
                 title: 'Tailwind',
                 icon: 'devicon-tailwindcss-original-wordmark'
+            },
+            {
+                title: 'Flask',
+                icon: 'devicon-flask-original'
             }
         ])
 
@@ -261,6 +264,10 @@ export default {
             {
                 title: 'Github',
                 icon: 'devicon-github-original'
+            },
+            {
+                title: 'Gitlab',
+                icon: 'devicon-gitlab-plain'
             }
         ])
 
@@ -276,21 +283,29 @@ export default {
             {
                 title: 'Visual Studio',
                 icon: 'devicon-visualstudio-plain-wordmark'
+            },
+            {
+                title: 'Docker',
+                icon: 'devicon-docker-plain'
+            },
+            {
+                title: 'Jenkins',
+                icon: 'devicon-jenkins-line'
             }
         ])
 
         const qaSoftwares = ref([
             {
                 title: 'Playwright',
-                icon: 'devicon-playwright-plain'
+                icon: ''
             },
             {
                 title: "K6",
-                icon: "devicon-k6-original"
+                icon: ""
             },
             {
                 title: "Gherkin",
-                icon: "devicon-selenium-original"
+                icon: ""
             },
             {
                 title: "Cypress",
@@ -353,7 +368,20 @@ export default {
                 image: 'https://picsum.photos/200',
                 link: '',
                 techstack: ['Laravel', 'VueJS', 'Vuetify', 'MySQL', 'Materio UI']
-            }
+            },
+            {
+                title: 'Crossmatching Script',
+                description: 'A script that can crossmatch data from main consolidated data to data that was provided by constituents.',
+                image: 'https://picsum.photos/200',
+                link: '',
+                techstack: ['Python', 'Vue 3', 'MySQL', 'Vuetify', 'Flask', 'Pandas']
+            },
+            {
+                title: 'eHakus V2',
+                description: 'An advanced HR system with self-service features for employees to file leaves, view payslips, and update records. It streamlines approvals, automates workflows, and improves efficiency and transparency across HR processes.',
+                image: 'https://picsum.photos/200',
+                techstack: ['Laravel', 'MySQL', 'Vue 3', 'Vuetify']
+            },
         ])
 
 
