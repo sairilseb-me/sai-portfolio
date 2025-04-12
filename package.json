@@ -12,7 +12,7 @@
     "@jamescoyle/vue-icon": "^0.1.2",
     "@mdi/light-js": "^0.2.63",
     "core-js": "^3.8.3",
-    "devicon": "^2.15.1",
+    "devicon": "^2.16.0",
     "vue": "^3.2.13",
     "vue-router": "^4.2.5",
     "vuetify": "^3.4.7"
