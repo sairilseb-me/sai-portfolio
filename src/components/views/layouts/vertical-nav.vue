@@ -56,6 +56,10 @@ export default {
             {
                 title: 'Contact',
                 link: '/contact'
+            },
+            {
+                title: 'Privacy Policy',
+                link: '/privacy-policy'
             }
         ]
 
