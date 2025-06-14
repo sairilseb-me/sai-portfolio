@@ -5,6 +5,7 @@
       <v-btn variant="text" @click="routeTo('/about')">About</v-btn>
       <v-btn variant="text" @click="routeTo('/projects')">Projects</v-btn>
       <v-btn variant="text" @click="routeTo('/contact')">Contact</v-btn>
+      <v-btn variant="text" @click="routeTo('/privacy-policy')">Privacy Policy</v-btn>
     </v-app-bar>
 </template>
 
