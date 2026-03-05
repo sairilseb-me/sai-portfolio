@@ -10,7 +10,7 @@
                     <v-chip  v-for="(tech, index) in project.techstack" :key="index">{{ tech }}</v-chip>
                 </v-chip-group> 
                 <v-divider></v-divider>
-                <v-btn class="bg-purple text-white mt-3" @click="routeToProject">Project Details</v-btn>
+                <v-btn color="primary" class="mt-3" @click="routeToProject">Project Details</v-btn>
             </v-expansion-panel-text>
         </v-expansion-panel>
     </v-expansion-panels>
